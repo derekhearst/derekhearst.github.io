@@ -153,7 +153,7 @@ function drawScoreBoard() {
 		<span>Score : ${element.topScore}</span>
 	</div>`
 	});
-	document.getElementById("scoreboard").innerHTML = template
+	document.getElementById("players").innerHTML = template
 }
 drawScoreBoard()
 //#endregion
