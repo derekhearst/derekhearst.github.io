@@ -1,0 +1,85 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Contacts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <header class="container card">
+    <h1>
+      <i class="fa fa-fw fa-address-book"></i>
+      <span>My Contact List</span>
+    </h1>
+    <!-- TODO show the new-contact-form when this button is clicked -->
+    <button class="fab" onclick="toggleAddContactForm()" title="New Contact">
+      <i class="fa fa-lg fa-plus-circle"></i>
+    </button>
+    </div>
+    <hr>
+  </header>
+
+  <main class="container">
+
+    <form class="card mt-1 mb-1" id="new-contact-form" class="" onsubmit="addContact(event)">
+      <div>
+        <h4 class="mt-1 mb-1">
+          <i class="fa fa-fw fa-user"></i>
+          <span>Add Contact</span>
+        </h4>
+      </div>
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" name="name" required>
+        <label for="phone">Phone:</label>
+        <input type="tel" name="phone" required>
+        <label for="emergencyc">Emergency Contact:</label>
+        <input type="checkbox" name="emergencyc">
+      </div>
+
+      <hr>
+      <div class="d-flex space-between">
+        <button type="submit">Submit</button>
+        <!-- TODO hide this form when this button is clicked -->
+        <button class="btn-cancel" type="button" onclick="toggleAddContactForm()">cancel</button>
+      </div>
+    </form>
+
+    <div class="contacts" id="contact-list">
+      <!-- TODO Remove these templates and draw them using JavaScript -->
+      <div class="card mt-1 mb-1">
+        <h3 class="mt-1 mb-1">Jimmy Tester</h3>
+        <div class="d-flex space-between">
+          <p>
+            <i class="fa fa-fw fa-phone"></i>
+            <span>(777) 777-7777</span>
+          </p>
+          <i class="action fa fa-trash text-danger"></i>
+        </div>
+      </div>
+      <div class="card mt-1 mb-1 emergency-contact">
+        <h3 class="mt-1 mb-1">Emergency Contact Tester</h3>
+        <div class="d-flex space-between">
+          <p>
+            <i class="fa fa-fw fa-phone"></i>
+            <span>(777) 777-7777</span>
+          </p>
+          <i class="action fa fa-trash text-danger"></i>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
