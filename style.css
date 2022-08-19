@@ -16,8 +16,9 @@ body {
 	justify-content: center;
 	background-color: var(--background);
 	color: var(--text);
-	font: 1.2em/1.62 sans-serif;
+	font-family: 'PT Mono', monospace;
 	text-align: center;
+	gap: 30px;
 }
 
 a:link {
@@ -35,14 +36,15 @@ a:visited {
 
 .title {
 	color: var(--primary);
-	font-family: 'Silkscreen', cursive;
 	font-size: 80px;
-	margin: -10px;
+	margin: 10px;
 }
 
 article {
 	min-width: 50%;
 }
+
+
 
 .flexrow {
 	display: flex;
@@ -58,7 +60,7 @@ body li {
 .projcard {
 	background-color: var(--dark);
 	width: 100%;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 	display: flex;
 	outline: 4px solid grey;
@@ -71,6 +73,8 @@ body li {
 }
 
 .projdetails {
+	justify-content: flex-start;
+	width: 70%;
 	display: flex;
 	flex-direction: column;
 	align-self: stretch;
@@ -79,4 +83,9 @@ body li {
 
 .projdetails p {
 	color: wheat;
+}
+
+.projimg {
+	margin: 10px;
+	max-height: 200px;
 }
