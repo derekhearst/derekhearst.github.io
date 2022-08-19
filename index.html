@@ -1,37 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" type="image/png" href="data:image/png;base64,">
-<title>Derek Hearst's Website</title>
-<style>
-	body{
-		margin:1em auto;
-		max-width:45em;
-		padding:0 .62em;
-		font:1.2em/1.62 sans-serif;
-		color:#e3e3e3;
-		background:#181818;
-	}
-	h1,h2,h3 {line-height:1.3;}
-	a:link {color:#9cf}
-	a:hover, a:visited:hover {color:#cef}
-	a:visited {color:#c9f}
-</style>
-<article><header>
-<h1>Derek Hearst</h1>
-<aside><a title="My Github" href="https://www.github.com/derekhearst">GitHub</a>&nbsp;</aside>
-<aside><hr />
-<p style="text-align: center;"><a title="Blog" href="blog.html">Blog</a> | <a title="Parents Website" href="parents/default.htm">Parents Website</a> | <a title="School" href="school/default.html">School</a></p>
-</aside>
-</header>
-<h3>About me</h3>
-<ul>
-<li>Lived on a boat for three years.</li>
-<li>Managed a garry's mod server for about two years.</li>
-<li>Programmer / Telecomunnications technican.</li>
-<li>Pursuing a Bachelors in Computer Science.</li>
-<li>Great at focusing at one task and forgetting about the world outside.</li>
-</ul>
 
-</article>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="data:image/png;base64,">
+	<title>Derek Hearst's Website</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<header>
+		<h1 class="title">Derek Hearst</h1>
+		<a title="My Github" href="https://www.github.com/derekhearst">GitHub</a>
+		<hr />
+	</header>
+
+	<article>
+		<h2>Hello I'm Derek, software devloper by day, and sometimes by night too.</h2>
+		<p>Here are some things about me you might find interesting. </p>
+		<ul>
+			<li>I lived on a boat for three years</li>
+			<li>Owner of ChronoGaming, a garry's mod server i ran and developed</li>
+			<li>Software Devloper / Sysadmin</li>
+			<li>Curerntly studying at Boise CodeWorks</li>
+			<li>Great at focusing at one task and forgetting about the world outside.</li>
+		</ul>
+	</article>
+
+	<div>
+		<h2>Projects</h2>
+		<a href="/projects/balloonpop/index.html">
+			<div class="projcard" onclick="redirect()">
+				<div class=" projdetails">
+					<h2>Balloon Pop</h2>
+					<p>
+						This is a game where the objective is to pop balloons!
+						I created it for the pre-semester classwork.
+					</p>
+				</div>
+
+				<img src="/projects/balloonpop/assets/clipart2103447.png">
+			</div>
+		</a>
+
+	</div>
+
+</body>

@@ -1,0 +1,81 @@
+:root {
+	--primary: rgb(132, 255, 0);
+	--background: #181818;
+	--dark: #2b2b2b;
+	--darklight: #2c2c2c;
+	--text: #e3e3e3;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	max-width: 60em;
+	padding: 0 .62em;
+	justify-content: center;
+	background-color: var(--background);
+	color: var(--text);
+	font: 1.2em/1.62 sans-serif;
+	text-align: center;
+}
+
+a:link {
+	color: #9cf
+}
+
+a:hover,
+a:visited:hover {
+	color: #cef
+}
+
+a:visited {
+	color: #c9f
+}
+
+.title {
+	color: var(--primary);
+	font-family: 'Silkscreen', cursive;
+	font-size: 80px;
+	margin: -10px;
+}
+
+article {
+	min-width: 50%;
+}
+
+.flexrow {
+	display: flex;
+	flex-direction: row;
+	gap: 1em;
+	flex-wrap: wrap;
+}
+
+body li {
+	text-align: left;
+}
+
+.projcard {
+	background-color: var(--dark);
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	outline: 4px solid grey;
+}
+
+.projcard:hover {
+	background-color: var(--darklight);
+	cursor: pointer;
+	outline: 4px solid var(--primary);
+}
+
+.projdetails {
+	display: flex;
+	flex-direction: column;
+	align-self: stretch;
+
+}
+
+.projdetails p {
+	color: wheat;
+}
