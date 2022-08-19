@@ -10,6 +10,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	margin: auto;
+	margin-bottom: 3em;
 	max-width: 60em;
 	padding: 0 .62em;
 	justify-content: center;
