@@ -29,6 +29,7 @@ function addKitten(event) {
   }
   kittens.push(kitten)
   drawKittens()
+  event.target.reset()
 }
 
 /**
