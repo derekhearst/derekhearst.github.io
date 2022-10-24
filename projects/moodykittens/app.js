@@ -64,6 +64,7 @@ function drawKittens() {
     <div class="kittenbuttons">
       <button class="kittenbutton" onclick="pet(${kitten.id})">Pet</button>
       <button class="kittenbutton" onclick="catnip(${kitten.id})">Catnip</button>
+      <button class="kittenbutton" onclick="kill(${kitten.id})">Kill >:(</button>
     </div>
   </div>`
   })
@@ -107,6 +108,17 @@ function catnip(id) {
   let kitten = kittens.find(kitten => kitten.id == id)
   kitten.affection = 5
   kitten.mood = "normal"
+  drawKittens()
+}
+
+/**
+ * Removes the kitten
+ * poor child :(
+ * @param {string} id
+ */
+function kill(id) {
+  let kitten = kittens.find(kitten => kitten.id == id)
+  kittens.pop(kitten)
   drawKittens()
 }
 
