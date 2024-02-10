@@ -1,210 +1,200 @@
 :root {
-	--primary: rgb(132, 255, 0);
-	--primarydark: rgb(85, 164, 0);
-	--background: #252526;
-	--dark: #2b2b2b;
-	--darklight: #3a3a3a;
-	--shadow: rgba(0, 0, 0, 0.2);
-
+  --primary: rgb(132, 255, 0);
+  --primarydark: rgb(85, 164, 0);
+  --background: #252526;
+  --dark: #2b2b2b;
+  --darklight: #3a3a3a;
+  --shadow: rgba(0, 0, 0, 0.2);
 }
 
 body {
-	background-color: var(--background);
-	color: whitesmoke;
-	font-family: 'DynaPuff', cursive;
-	font-size: large;
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
-	width: 70%;
-	margin: auto;
+  background-color: var(--background);
+  color: whitesmoke;
+  font-family: "DynaPuff", cursive;
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 70%;
+  margin: auto;
 }
 
-@media screen and (max-width:700px) {
-	body {
-		width: 100%;
-	}
-
+@media screen and (max-width: 700px) {
+  body {
+    width: 100%;
+  }
 }
 
 header {
-	align-self: center;
+  align-self: center;
 }
 
 button {
-	background-color: var(--primary);
-	border-radius: 4px;
-	margin: 8px;
-	font-family: 'DynaPuff', cursive;
-	text-transform: uppercase;
-	border: 0px;
+  background-color: var(--primary);
+  border-radius: 4px;
+  margin: 8px;
+  font-family: "DynaPuff", cursive;
+  text-transform: uppercase;
+  border: 0px;
 
-	height: 30px;
+  height: 30px;
 
-	width: 200px;
-	transition: all .2s ease
+  width: 200px;
+  transition: all 0.2s ease;
 }
 
 button:hover {
-	background-color: var(--primarydark);
+  background-color: var(--primarydark);
 }
 
 input {
-	border-radius: 4px;
-	border: none;
-	margin: 2px 0px;
-	font-family: 'DynaPuff', cursive;
-	background-color: whitesmoke;
-	outline: none;
-
+  border-radius: 4px;
+  border: none;
+  margin: 2px 0px;
+  font-family: "DynaPuff", cursive;
+  background-color: whitesmoke;
+  outline: none;
 }
 
 form {
-	margin: 0;
-	align-items: center;
+  margin: 0;
+  align-items: center;
 }
 
-
 .pump {
-	height: 130px;
-	width: 180px;
-	position: relative;
-	margin-top: 200;
+  height: 130px;
+  width: 180px;
+  position: relative;
+  margin-top: 200;
 }
 
 .pump:active .handle {
-	top: -20px;
+  top: -20px;
 }
 
 .pumpbase {
-	background-color: whitesmoke;
-	width: 100;
-	height: 130;
-	border-top-right-radius: 20px;
-	border-top-left-radius: 20px;
-	z-index: 0;
-	z-index: 2;
-	position: absolute;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	user-select: none;
+  background-color: whitesmoke;
+  width: 100;
+  height: 130;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  z-index: 0;
+  z-index: 2;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
 }
 
 .handle {
-	left: 8px;
-	height: 10;
-	width: 80;
-	top: -80;
-	position: absolute;
-	background-color: var(--primary);
-	display: flex;
-	justify-content: center;
-	transition: all 0.05s linear;
-	z-index: 1;
+  left: 8px;
+  height: 10;
+  width: 80;
+  top: -80;
+  position: absolute;
+  background-color: var(--primary);
+  display: flex;
+  justify-content: center;
+  transition: all 0.05s linear;
+  z-index: 1;
 }
 
 .handle::before {
-	content: "";
-	background-color: var(--primary);
-	width: 10px;
-	height: 80px;
-	display: block;
+  content: "";
+  background-color: var(--primary);
+  width: 10px;
+  height: 80px;
+  display: block;
 }
 
 .balloon {
-	height: 120px;
-	width: 100px;
-	background-color: var(--primary);
-	border-radius: 50%;
-	transition: all .2s ease;
-	animation: balloon-float 5s ease-in-out infinite;
-	align-self: flex-end;
-	margin: 0 auto;
-	box-shadow: inset -10px -10px 12px rgba(0, 0, 0, 0.5)
+  height: 120px;
+  width: 100px;
+  background-color: var(--primary);
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  animation: balloon-float 5s ease-in-out infinite;
+  align-self: flex-end;
+  margin: 0 auto;
+  box-shadow: inset -10px -10px 12px rgba(0, 0, 0, 0.5);
 }
 
 .balloon.blue {
-	background-color: blue;
+  background-color: blue;
 }
 
 .balloon.red {
-	background-color: red;
+  background-color: red;
 }
 
 .balloon.yellow {
-	background-color: yellow;
+  background-color: yellow;
 }
 
 .balloon.purple {
-	background-color: purple;
+  background-color: purple;
 }
 
-
-
 @keyframes balloon-float {
+  0%,
+  100% {
+    transform: translateY(-45) rotate(10deg);
+  }
 
-	0%,
-	100% {
-		transform: translateY(-45) rotate(10deg);
-	}
-
-	50% {
-		transform: translateY(0) rotate(-10deg);
-	}
+  50% {
+    transform: translateY(0) rotate(-10deg);
+  }
 }
 
 #gameview {
-	height: 400px;
+  height: 400px;
 }
 
-
 .card {
-	background-color: var(--dark);
-	padding: 10px;
-	box-shadow: 2px 0 8px var(--shadow);
-	border-radius: 8px;
+  background-color: var(--dark);
+  padding: 10px;
+  box-shadow: 2px 0 8px var(--shadow);
+  border-radius: 8px;
 }
 
 .card.light {
-	background-color: var(--darklight);
+  background-color: var(--darklight);
 }
 
 .logo-container {
-	width: 100%;
-	margin: auto;
+  width: 100%;
+  margin: auto;
 }
 
 #click-count {
-	color: black;
-	font-size: 30;
-
+  color: black;
+  font-size: 30;
 }
 
 #scoreboard {
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
-
 
 /* UTILITY CLASSES */
 .d-flex {
-	display: flex;
+  display: flex;
 }
 
 .d-flex.space-between {
-	justify-content: space-between;
+  justify-content: space-between;
 }
 
 .d-flex.space-evenly {
-	justify-content: space-evenly;
+  justify-content: space-evenly;
 }
 
 .text-center {
-	text-align: center;
+  text-align: center;
 }
 
 .hidden {
-	display: none !important;
+  display: none !important;
 }

@@ -1,91 +1,88 @@
 :root {
-	--primary: rgb(132, 255, 0);
-	--background: #181818;
-	--dark: #2b2b2b;
-	--darklight: #2c2c2c;
-	--text: #e3e3e3;
+  --primary: rgb(132, 255, 0);
+  --background: #181818;
+  --dark: #2b2b2b;
+  --darklight: #2c2c2c;
+  --text: #e3e3e3;
 }
 
 body {
-	display: flex;
-	flex-direction: column;
-	margin: auto;
-	margin-bottom: 3em;
-	max-width: 60em;
-	padding: 0 .62em;
-	justify-content: center;
-	background-color: var(--background);
-	color: var(--text);
-	font-family: 'PT Mono', monospace;
-	text-align: center;
-	gap: 30px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-bottom: 3em;
+  max-width: 60em;
+  padding: 0 0.62em;
+  justify-content: center;
+  background-color: var(--background);
+  color: var(--text);
+  font-family: "PT Mono", monospace;
+  text-align: center;
+  gap: 30px;
 }
 
 a:link {
-	color: #9cf
+  color: #9cf;
 }
 
 a:hover,
 a:visited:hover {
-	color: #cef
+  color: #cef;
 }
 
 a:visited {
-	color: #c9f
+  color: #c9f;
 }
 
 .title {
-	color: var(--primary);
-	font-size: 80px;
-	margin: 10px;
+  color: var(--primary);
+  font-size: 80px;
+  margin: 10px;
 }
 
 article {
-	min-width: 50%;
+  min-width: 50%;
 }
 
-
-
 .flexrow {
-	display: flex;
-	flex-direction: row;
-	gap: 1em;
-	flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  flex-wrap: wrap;
 }
 
 body li {
-	text-align: left;
+  text-align: left;
 }
 
 .projcard {
-	background-color: var(--dark);
-	width: 100%;
-	align-items: center;
-	display: flex;
-	outline: 4px solid grey;
+  background-color: var(--dark);
+  width: 100%;
+  align-items: center;
+  display: flex;
+  outline: 4px solid grey;
 }
 
 .projcard:hover {
-	background-color: var(--darklight);
-	cursor: pointer;
-	outline: 4px solid var(--primary);
+  background-color: var(--darklight);
+  cursor: pointer;
+  outline: 4px solid var(--primary);
 }
 
 .projdetails {
-	justify-content: flex-start;
-	width: 70%;
-	display: flex;
-	flex-direction: column;
-	align-self: stretch;
-
+  justify-content: flex-start;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
 }
 
 .projdetails p {
-	color: wheat;
+  color: wheat;
 }
 
 .projimg {
-	max-width: 30%;
-	margin: 10px;
-	max-height: 200px;
+  max-width: 30%;
+  margin: 10px;
+  max-height: 200px;
 }

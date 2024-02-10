@@ -1,83 +1,72 @@
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Balloon Pop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DynaPuff&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Balloon Pop</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=DynaPuff&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="style.css">
-</head>
+  <body>
+    <header>
+      <div class="logo-container m3">
+        <img src="./assets/clipart2103447.png" alt="Pop the Balloons!" />
+      </div>
+    </header>
 
-<body>
+    <main>
+      <form
+        class="d-flex card space-between"
+        id="playerform"
+        onsubmit="setPlayer(event)"
+      >
+        <div>
+          <label for="name">Name : </label>
+          <input class="smallCorner" type="text" required name="playername" />
+        </div>
+        <button class="smallCorner" type="submit">Ok</button>
+      </form>
 
-	<header>
-		<div class="logo-container m3">
-			<img src="./assets/clipart2103447.png" alt="Pop the Balloons!">
-		</div>
-	</header>
+      <section id="game" class="game m3 card hidden">
+        <div class="card light m3 d-flex space-between">
+          <div>Player : <span id="playername"></span></div>
+          <div>High Score : <span id="high-score-count">0</span></div>
+        </div>
 
-	<main>
+        <div id="controls" class="d-flex space-evenly">
+          <button onclick="changePlayer()">Change Player</button>
+          <button onclick="startGame()" id="start-game-button">
+            Start game!
+          </button>
+        </div>
 
-		<form class="d-flex card space-between" id="playerform" onsubmit="setPlayer(event)">
-			<div>
-				<label for="name">Name : </label>
-				<input class="smallCorner" type="text" required name="playername">
-			</div>
-			<button class="smallCorner" type="submit">Ok</button>
-		</form>
+        <div id="gameview" class="hidden">
+          <div>Balloons Popped : <span id="pop-count">0</span></div>
+          <div>Time Remaining : <span id="time-remaining">5</span> seconds</div>
 
+          <div class="d-flex space-between">
+            <div class="pump" onclick="inflate()">
+              <div class="handle"></div>
+              <div class="pumpbase"><span id="click-count">0</span></div>
+            </div>
+            <div id="balloon" class="balloon"></div>
+            <audio id="audioBurst" src="./assets/burst.mp3"></audio>
+          </div>
+        </div>
+      </section>
+    </main>
 
+    <div id="scoreboard" class="card">
+      <h3 class="text-center">Scoreboard</h3>
+      <div id="players"></div>
+    </div>
 
-		<section id="game" class="game m3 card hidden">
-			<div class="card light m3 d-flex space-between">
-				<div>
-					Player : <span id="playername"></span>
-				</div>
-				<div>
-					High Score : <span id="high-score-count">0</span>
-				</div>
-			</div>
-
-			<div id="controls" class="d-flex space-evenly">
-				<button onclick="changePlayer()">Change Player</button>
-				<button onclick="startGame()" id="start-game-button">Start game!</button>
-			</div>
-
-			<div id="gameview" class="hidden">
-				<div>
-					Balloons Popped : <span id="pop-count">0</span>
-				</div>
-				<div>
-					Time Remaining : <span id="time-remaining">5</Span> seconds
-				</div>
-
-
-				<div class="d-flex space-between">
-					<div class="pump" onclick="inflate()">
-						<div class="handle"></div>
-						<div class="pumpbase"><span id="click-count">0</span></div>
-
-					</div>
-					<div id="balloon" class="balloon"></div>
-					<audio id="audioBurst" src="./assets/burst.mp3"></audio>
-				</div>
-			</div>
-		</section>
-	</main>
-
-
-
-	<div id="scoreboard" class="card">
-		<h3 class="text-center">Scoreboard</h3>
-		<div id="players"></div>
-	</div>
-
-
-
-	<script src="script.js"></script>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>
